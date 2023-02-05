@@ -3,73 +3,381 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>clothing-test-shop</title>
     <style>
-        .ahoj{
-            width: 70%;
-            margin: 0 auto;
-            display: grid;
-            place-items: center;
-            border: 2px solid pink;
-            margin-bottom: 50px;
-            background-color: aqua;
+        body{
+            font-family: sans-serif;
         }
-        .img-container{
-            width: 50%;
-            margin: 0 auto;
-            display: grid;
-            place-items: center;
-            border: 2px solid pink;
-        }
-        img{
-            width: 80%;
-        }
-        .text-test{
-            margin: 0 auto;
-            max-width: 90%;
-            flex-direction: row;
+        nav{
+            width: 100%;
             display: flex;
+            align-items: center;
             justify-content: space-between;
+            background-color: lightgray;
         }
-        .div1{
-            max-width: 20%;
+        .navbar{
+            grid-area: navbar;
         }
-        .div2{
-            max-width: 20%;
+        .logo-nav{
+            width: 50px;
+            margin: 0;
+            margin-left: 30px;
         }
-        .div3{
-            max-width: 20%;
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
         }
+        nav ul li a{
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+        }
+        nav ul li a:hover{
+            color: #ff5ea2;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr;
+            grid-template-areas: 
+                "navbar navbar navbar"
+                "main main main"
+                "clothing1 clothing2 clothing3"
+                "clothing4 clothing5 clothing6"
+                "footer footer footer"
+            ;
+        }
+
+
+        main{
+            text-align: center;
+            grid-area: main;
+        }
+
+
+        .clothing-column1{
+            grid-area: clothing1;
+        }
+        .clothing-column2{
+            grid-area: clothing2;
+        }
+        .clothing-column3{
+            grid-area: clothing3;
+        }
+        .clothing-column4{
+            grid-area: clothing4;
+        }
+        .clothing-column5{
+            grid-area: clothing5;
+        }
+        .clothing-column6{
+            grid-area: clothing6;
+        }
+        .clothing-column7{
+            grid-area: clothing7;
+        }
+        .clothing-column8{
+            grid-area: clothing8;
+        }
+        .clothing-column9{
+            grid-area: clothing9;
+        }
+        .clothing-column10{
+            grid-area: clothing10;
+        }
+        .clothing-column11{
+            grid-area: clothing11;
+        }
+        .clothing-column12{
+            grid-area: clothing12;
+        }
+        .clothing-column13{
+            grid-area: clothing13;
+        }
+        .clothing-column14{
+            grid-area: clothing14;
+        }
+        .clothing-column15{
+            grid-area: clothing15;
+        }
+        .clothing-column16{
+            grid-area: clothing16;
+        }
+        .clothing-column17{
+            grid-area: clothing17;
+            height: fit-content;
+        }
+        .clothing-column18{
+            grid-area: clothing18;
+        }
+
+
+        .instagram-img{
+            width: 50px;
+        }
+        .discord-img{
+            width: 50px;
+        }
+        footer{
+            color: white;
+            background-color: #000;
+            grid-area: footer;
+            width: 100%;
+        }
+
+        .clothing-column1, 
+        .clothing-column2, 
+        .clothing-column3, 
+        .clothing-column4,
+        .clothing-column5, 
+        .clothing-column6,
+        .clothing-column7,
+        .clothing-column8,
+        .clothing-column9,
+        .clothing-column10,
+        .clothing-column11,
+        .clothing-column12,
+        .clothing-column13,
+        .clothing-column14,
+        .clothing-column15,
+        .clothing-column16,
+        .clothing-column17,
+        .clothing-column18{
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none;
+            box-sizing: border-box;
+            margin: 0 auto;
+            background-color: lightgray;
+            padding: 5px;
+            width: fit-content;
+            box-shadow: 0px 0px 10px gray;
+            transition: 0.15s;
+            cursor: pointer;
+            margin-bottom: 10%;
+        }
+
+        
+        @media only screen and (max-width:500000px){
+            .container{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr;
+                grid-template-areas: 
+                    "navbar navbar navbar navbar"
+                    "main main main main"
+                    "clothing1 clothing2 clothing3 clothing4"
+                    "clothing5 clothing6 clothing7 clothing8"
+                    "clothing9 clothing10 clothing11 clothing12"
+                    " clothing13 clothing14 clothing15 clothing16"
+                    " clothing17 clothing18 clothing18 clothing18"
+                    "footer footer footer footer"
+                ;
+            }
+        }
+        @media only screen and (max-width:992px){
+            .container{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr;
+                grid-template-areas: 
+                    "navbar navbar navbar"
+                    "main main main"
+                    "clothing1 clothing2 clothing3"
+                    "clothing4 clothing5 clothing6"
+                    "clothing7 clothing8 clothing9"
+                    "clothing10 clothing11 clothing12"
+                    "clothing13 clothing14 clothing15"
+                    "clothing16 clothing17 clothing18"
+                    "footer footer footer"
+                ;
+            }
+        }
+        @media only screen and (max-width:768px){
+            .container{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr;
+                grid-template-areas: 
+                    "navbar navbar"
+                    "main main"
+                    "clothing1 clothing2"
+                    "clothing3 clothing4"
+                    "clothing5 clothing6"
+                    "clothing7 clothing8"
+                    "clothing9 clothing10"
+                    "clothing11 clothing12"
+                    "clothing13 clothing14"
+                    "clothing15 clothing16"
+                    "clothing17 clothing18"
+                    "footer footer"
+                ;
+            }
+        }
+        @media only screen and (max-width:600px){
+            .container{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr;
+                grid-template-areas: 
+                    "navbar"
+                    "main"
+                    "clothing1"
+                    "clothing2"
+                    "clothing3"
+                    "clothing4"
+                    "clothing5"
+                    "clothing6"
+                    "clothing7"
+                    "clothing8"
+                    "clothing9"
+                    "clothing10"
+                    "clothing11"
+                    "clothing12"
+                    "clothing13"
+                    "clothing14"
+                    "clothing15"
+                    "clothing16"
+                    "clothing17"
+                    "clothing18"
+                    "footer"
+                ;
+            }
+        }
+        
+        
+        
+        
 
     </style>
 </head>
 <body>
-    <div class="ahoj">
-        <p>ahoj</p>
-    </div>
-    <div class="img-container">
-        <img class="img" src="kocka.webp" >
-    </div>
-    <div class="text-test">
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <img src="Playstation_Img/logo.png" class="logo-nav">
+                <div class="ul-list">
+                    <ul class="menuList">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <h1>This is a clothing brand</h1><br>
+            <h2>Pick the best style that fits you</h2>
+        </main>
 
-        <div class="div1">
-            <h2 class="h2ok">Section 1</h2>
-            <p>
-               vobysuivbfyuidsobvyuebesgdgfdsbgfdsbdfbdfgbdsfgggsdfasfsdfdsadsunvhfsaunvfhuisdnvhufiasnvhfuisdanvhufisdanvhfuaisdnvhaufinvad
-            </p>
-        </div>
-        <div class="div2">
-            <h2 class="h2ok">Section 2</h2>
-            <p>
-               miofvndsyuivobysuivbfyuidsobvyu]ebesgdgfdsbgfdsbdfbdfgbdsfgggsdfasfsdfdsadsunvhfsaunvfhuisdnvhufiasnvhfuisdanvhufisdanvhfuaisdnvhaufinvad
-            </p>
-        </div>
-        <div class="div3">
-            <h2 class="h2ok">Section 3</h2>
-            <p>
-                hausioasnv udsio ufnaop uifdsoa vufifopsa[ajvio[pfmiofvndsyuivobysuivbfyuidsobvyu]ebesgdgfdsbgfdsbdfbdfgbdsfgggsdfasfsdfdsadsunvhfsaunvfhuisdnvhufiasnvhfuisdanvhufisdanvhfua
-            </p>
-        </div>
+            <div class="clothing-column1">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column2">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column3">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column4">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column5">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column6">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column7">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column8">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column9">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column10">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column11">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column12">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column13">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column14">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column15">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column16">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column17">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+            <div class="clothing-column18">
+                <img src="t-shirt.jpg" class="tshirt-img">
+                <p class="shirt-text">T-shirt</p>
+                <p clas="price">10$</p>
+            </div>
+
+        
+        <footer>
+            <p>Socials</p>
+            <div class="socials-container">
+                <img src="new-Instagram-logo-white-glyph-1200x1199.png" class="instagram-img">
+                <img src="kindpng_1085049.png" class="discord-img">
+            </div>
+        </footer>
     </div>
+
+    <script>
+
+
+
+    </script>
+
 </body>
 </html>
